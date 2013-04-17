@@ -4,12 +4,12 @@
 %
 % THESIS: FAST STAR PATTERN RECOGNITION USING SPHERICAL TRIANGLES
 % Craig L Cole
-% 8 January 2003
+% 12 January 2004
 %
-% Creates Pointer Array and K-Vector for Unosrted Catalog of Angles
-% for Angle Method Use
+% Creates Pointer Array and K-Vector for Unosrted Catalog of Sph Tris
+% for Spherical Triangle Method Use
 %
-% INPUTS:   SphTrixxxx - Unsorted Catalog Of Spherical Triangles
+% INPUTS:   SphTri2xxxx - Unsorted Catalog Of Spherical Triangles
 %
 % OUTPUT:   SphTriPtrxxxx - Pointer Array of Sph. Tris, sorted by area
 %
@@ -24,7 +24,6 @@ load SphTri2M60L4
 
 global TreeVal TreeLeft TreeRight
 
-nTri = 10000
 Tri = Tri(1:nTri);
 
 % Preallocate memory for everything

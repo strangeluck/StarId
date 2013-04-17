@@ -52,9 +52,17 @@ else
         sv1 = StarsInFOV(s1).mv;
         for s2=s1+1:nStarsInFOV
             sv2 = StarsInFOV(s2).mv;
+            
+            %[sv1 sv2]
                 
             mDotPr = dot( sv1, sv2 );
             mAng   = acos( mDotPr );
+            
+            %[mDotPr mAng mAng*180/pi]
+            
+            if mAng > pi/2
+                mAng = pi - mAng;
+            end
                 
             if mAng < FOVmax
             

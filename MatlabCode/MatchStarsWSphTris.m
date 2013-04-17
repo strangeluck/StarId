@@ -57,7 +57,13 @@ else
         for s2=s1+1:nStarsInFOV-1
             sv2 = StarsInFOV(s2).mv;
             
-            if acos( dot( sv1, sv2 ) ) <= FOVmax
+            mAng = acos( dot( sv1, sv2 ) );
+            
+            if mAng > pi/2
+                mAng = pi - mAng;
+            end
+            
+            if mAng <= FOVmax
                 
                 for s3=s2+1:nStarsInFOV
                     sv3 = StarsInFOV(s3).mv;

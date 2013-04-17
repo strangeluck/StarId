@@ -29,7 +29,9 @@ function PlotInFOV( P1, P2, FOV, clr, c )
 % Determine equation of plane that will be perpendicular to vector P
 % and pass through pt P
 
-P = [1 0 0]';  % Center of FOV in star tracker frame
+%P = [1 0 0]';  % Center of FOV in star tracker frame
+P = [0 0 1]';  % Center of FOV in star tracker frame
+
 
 if clr == 1
     
