@@ -23,7 +23,7 @@
 
 function StarList = FindStarsInFOV( trvector, FOV )
 
-global Star gmode Vertex nVertex
+global Star gmode Vertex nVertex Node
 
 % Get node number in which vector points (nodes created as necessary)
 
