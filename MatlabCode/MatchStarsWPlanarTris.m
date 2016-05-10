@@ -198,7 +198,7 @@ else
         nFinalists = k
         Results.nFinalists = k;
         
-        if bitand( gmode, 4 ) == 4            
+        if bitand( gmode, 2 ) == 2          
             sv1 = StarsInFOV( T(start).Stars(1) ).mv;
             sv2 = StarsInFOV( T(start).Stars(2) ).mv;
             sv3 = StarsInFOV( T(start).Stars(3) ).mv;            
@@ -235,9 +235,9 @@ else
                 break;
         end
         
-        % Plot in FOV as desired (bit 3 of gmode set)
+        % Plot in FOV as desired (bit 2 of gmode set)
         
-        if bitand( gmode, 4) == 4
+        if bitand( gmode, 2 ) == 2
             PlotInFOV( sv1, sv2, FOV, 0, '-b' );
             PlotInFOV( sv2, sv3, FOV, 0, '-b' );
             PlotInFOV( sv3, sv1, FOV, 0, '-b' );

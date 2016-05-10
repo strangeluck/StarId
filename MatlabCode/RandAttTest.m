@@ -51,10 +51,10 @@ Method = 1              % Set to 1 for Angle Method, 2 for SphTri Method, 3 for 
 plimit = 9              % Pivot limit
 falsestar = true        % Adds false star (eg debris) to FOV if TRUE
 
-ntests = 1000           % Number of tests
+ntests = 5              % Number of tests
 nStarsInFOVMin = 5      % Only count attitudes that contain at least this many stars
 
-gmode = 0;              % Bit 1 = 3-D View of FOV
+gmode = 3;              % Bit 1 = 3-D View of FOV
                         % Bit 2 = Star Tracker FOV
                         % Bit 3 = Wait between tests
 
@@ -238,12 +238,14 @@ while i < ntests;
     else
         
         '-- TOO FEW STARS FOR TEST. ATTITUDE REJECTED.--'
-        
     end
     
-    
+    % Pause for user if desired
     if bitand( gmode, 4 ) == 4
-        WaitForKeyPress;
+        shallExit = WaitForKeyPress;
+        if shallExit
+            break;
+        end
     end
    
 end
