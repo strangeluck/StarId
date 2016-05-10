@@ -17,10 +17,15 @@
 %
 % =========================================================================
 
-'Press A Key...'
+function shallExit=WaitForKeyPress();
 
-w=0;
+shallExit = false;
 
-while w ~= 1;
-    w = waitforbuttonpress;   
+ans = input ("Enter 'X' to exit, anything else to continue: ", "s");
+
+if ans == "X" || ans == "x"
+    fprintf("Exiting early.\n\n");
+    shallExit = true;
+else
+    fprintf("Working...\n\n");
 end
